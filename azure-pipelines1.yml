@@ -22,6 +22,6 @@ stages:
              Dockerfile: '**/Dockerfile'
          - task: PublishBuildArtifacts@1
            inputs:
-            PathtoPublish: '$(Build.ArtifactStagingDirectory)/kube-manifests'
+            PathtoPublish: '$(System.DefaultWorkingDirectory)/kube-manifests'
             ArtifactName: 'drop'
             publishLocation: 'Container'
